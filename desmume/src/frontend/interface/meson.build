@@ -40,6 +40,12 @@ else
   have_jit = false
 endif
 
+
+add_global_arguments('-Wno-c++11-narrowing', language: ['c', 'cpp'])
+
+add_global_arguments('-framework', 'OpenAL', language: ['c', 'cpp'])
+
+
 includes = include_directories(
   '../../../src',
   '../../../src/libretro-common/include',
